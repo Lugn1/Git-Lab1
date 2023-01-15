@@ -24,3 +24,19 @@ git cherry-pick feature2
 notepad fix2.txt
 git remote add origin https://github.com/Lugn1/Git-Lab1.git
 git push -u origin --all
+
+git tag -a v1.0 -m 'Version 1.0'
+git rebase -i HEAD~3
+	pick 8e8d514 Add fix2.txt
+	squash 0d9337d Add git commands to fix2.txt
+	pick 21ba9be Add .gitignore	
+
+git switch -c feature3
+notepad fix2.txt
+git add fix2.txt; git commit -m 'Update fix2.txt with additional git commands'
+
+git checkout main
+git merge feature3
+git pull --no-rebase
+git push
+git push --tags
