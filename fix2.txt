@@ -1,0 +1,26 @@
+git init; git branch -M main
+new-item README.md; notepad README.md
+git add README.md; git commit -m 'Initial commit'
+git switch -c feature1
+notepad README.md
+git add README.md; git commit -m 'Add dog and change moose to mouse'
+git checkout main
+notepad README.md
+git add README.md; git commit -m 'Change moose to mahmut'
+git merge feature1
+notepad README.md
+git add README.md; git commit
+git tag extinct
+git reset --hard HEAD^
+git branch feature2
+notepad README.md
+git add README.md; git commit -m 'Fix uppercase'
+git checkout feature2
+new-item fix1.txt, fix2.txt
+git add fix1.txt; git commit -m 'Add fix1.txt'
+git add fix2.txt; git commit -m 'Add fix2.txt'
+git checkout main 
+git cherry-pick feature2
+notepad fix2.txt
+git remote add origin https://github.com/Lugn1/Git-Lab1.git
+git push -u origin --all
